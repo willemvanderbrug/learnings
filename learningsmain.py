@@ -1,7 +1,9 @@
-Python 3.11.2 (tags/v3.11.2:878ead1, Feb  7 2023, 16:38:35) [MSC v.1934 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> myname=("willem2")
->>> print myname
-SyntaxError: incomplete input
->>> print(myname)
-willem
+import datetime
+import calendar
+
+def find_day(date):
+    kon = datetime.datetime.strptime(date, '%d %m %Y').weekday()
+    return calendar.day_name[kon]
+
+print("The day of the week is " + find_day("11 10 2023"))
+
